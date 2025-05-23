@@ -2,11 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Button, Stack, TextField } from '@mui/material'
 
-
-
-
 function App() {
-
   const [principle, setPrinciple] = useState(0)
   const [interest, setInterest] = useState(0)
   const [year, setYear] = useState(0)
@@ -95,11 +91,11 @@ function App() {
 
 
       <div style={{ minHeight: "100vh", width: "100%" }} className='d-flex align-item-center justify-content-center bg-dark p-4'>
-        <div style={{ width: "600px" }} className='text-cente bg-light p-5 rounded'>
-          <h3>Simple Interest Calculator</h3>
-          <p>Calculate Your Simple Interest Easily</p>
+        <div style={{ width: "600px" }} className='text-center bg-light p-5 rounded'>
+          <h2 className='fw-bold'>💰Simple Interest Calculator</h2>
+          <p className='fw-bold'>Calculate Your Simple Interest Easily</p>
 
-          <div className=' d-flex bg-warning rounded text-light align-item-center justify-content-center  p-5 flex-column'>
+          <div className=' d-flex bg-success rounded text-light align-item-center justify-content-center  p-5 flex-column'>
             <h2>₹ {simpleInterest}</h2>
             <h5>Total Simple Interest</h5>
           </div>
@@ -120,11 +116,10 @@ function App() {
               }
 
               <Stack className='mt-3' direction='row' spacing={2}>
-                <Button disabled={IsInvalidPrinciple || IsInvalidInterest || IsInvalidYear} type='submit' onClick={handleCalculator} style={{ height: "50px" }} className="w-100 bg-dark" variant="contained">Calculate</Button>
+                <Button disabled={IsInvalidPrinciple || IsInvalidInterest || IsInvalidYear} type='submit' onClick={handleCalculator} style={{ height: "50px" }} className="w-100 bg-success text-light" variant="contained">Calculate</Button>
                 <Button onClick={handleReset} className="w-100" variant="outlined">Reset</Button>
               </Stack>
             </div>
-
 
           </form>
         </div>
@@ -136,3 +131,5 @@ function App() {
 }
 
 export default App
+
+
